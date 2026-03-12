@@ -1,0 +1,21 @@
+agotado, bajo, normal = 0, 0, 0
+
+for i in range(1, 11):
+    nombre = input(f"\nProducto {i} - Nombre: ")
+    cantidad = int(input("Cantidad disponible: "))
+
+    if cantidad == 0:
+        estado = "agotado"
+        agotado += 1
+    elif cantidad <= 5:
+        estado = "stock bajo"
+        bajo += 1
+    else:
+        estado = "stock normal"
+        normal += 1
+
+    print(f"{nombre} → {estado}")
+
+print(f"\nAgotados:    {agotado}")
+print(f"Stock bajo:  {bajo}")
+print(f"Stock normal:{normal}")
